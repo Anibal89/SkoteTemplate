@@ -46,17 +46,8 @@ const SwortList = () => {
   /*------------------------------------------------------------------------------------------------------------------------------------*/
 
   const inpRow = [{ name: "", file: "" }];
-  const [startDate, setstartDate] = useState(new Date());
-  const [endDate, setendDate] = useState(new Date());
   const [inputFields, setinputFields] = useState(inpRow);
 
-  const startDateChange = (date) => {
-    setstartDate(date);
-  };
-
-  const endDateChange = (date) => {
-    setendDate(date);
-  };
 
   // Function for Create Input Fields
   function handleAddFields() {
