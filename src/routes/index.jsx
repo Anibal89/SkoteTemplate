@@ -74,6 +74,10 @@ import DashboardSaas from "../pages/Dashboard-saas/index"
 import DashboardCrypto from "../pages/Dashboard-crypto/index"
 import Blog from "../pages/Dashboard-Blog/index"
 
+//Bodeguero
+
+import Bodeguero from '../pages/Dashboard-Bodeguero/Bodega/index'
+
 // //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell"
@@ -179,6 +183,11 @@ const authProtectedRoutes = [
   { path: "/dashboard-saas", component: DashboardSaas },
   { path: "/dashboard-crypto", component: DashboardCrypto },
   { path: "/blog", component: Blog },
+
+//Bodeguero
+{ path: "/Bodega-uni", component: Bodeguero },
+
+
 
 //   //Crypto
   { path: "/crypto-wallet", component: CryptoWallet },
