@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -8,12 +8,6 @@ import {
   CardTitle,
 } from "reactstrap";
 
-// Import Editor
-import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
-//Import Date Picker
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 //Import Breadcrumb
@@ -25,12 +19,28 @@ const SwortList = () => {
   document.title = "SwortList | Skote - Vite React Admin & Dashboard Template";
 
 
+/*----------------------------------------------------------Metodo Get Roles--------------------------------------------------------------------------*/ 
+ 
   // Metodo Get del Crud
-/*   const [rols, setRol] = useState([]) */
+   const [rols, setRol] = useState([]) 
 
+  // Actualizacion de tabla 
+  const [listUpdate, setListUpdate] = useState(false) 
 
-  /* Actualizacion de tabla */
-/*   const [listUpdate, setListUpdate] = useState(false) */
+  // Uso de  Metodos Mapeo de datos 
+   useEffect(() => {
+    mapeoDatos()
+    setListUpdate(false)
+  }, [listUpdate])
+
+  // Mapeo de Datos en Tabla GET 
+  const mapeoDatos = async () => {
+    const res = await fetch('http://localhost:4000/api/rol', { mode: 'cors' })
+    const rols = await res.json()
+    setRol(rols)
+  }
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 
 
   
@@ -83,10 +93,11 @@ const SwortList = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Item 1</td>
-                          <td>Item 2</td>
-                          <td>Item 3</td>
+                      {rols.map((item) => (
+                      <tr key={item.Id_Rol}>
+                        <th>{item.Id_Rol}</th>
+                        <td>{item.Nombre_Rol}</td>
+                        <td>{item.Estado_Rol}</td>
                           <td>
                             <button
                               style={{ color: "#fff" }}
@@ -105,6 +116,7 @@ const SwortList = () => {
                             </button>
                           </td>
                         </tr>
+                           ))}
                       </tbody>
                     </table>
                   </div>
