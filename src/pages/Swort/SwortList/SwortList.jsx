@@ -41,24 +41,28 @@ const SwortList = () => {
     const res = await fetch("http://localhost:4000/api/rol", { mode: "cors" });
     const rols = await res.json();
     setRol(rols);
-  };
+  }
 
-  /*------------------------------------------------------------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------Meotdo Post Roles----------------------------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+  /*-----------------------------------------------------------------------------------------------------------------------------------*/
+  
+  
+  
+  
   const inpRow = [{ name: "", file: "" }];
   const [inputFields, setinputFields] = useState(inpRow);
-
-
-  // Function for Create Input Fields
-  function handleAddFields() {
-    const item1 = { name: "", file: "" };
-    setinputFields([...inputFields, item1]);
-  }
-
-  // Function for Remove Input Fields
-  function handleRemoveFields(idx) {
-    document.getElementById("nested" + idx).style.display = "none";
-  }
 
   return (
     <>
