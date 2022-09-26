@@ -174,6 +174,8 @@ import ContactsGrid from "../pages/Contacts/contacts-grid"
 import ContactsList from "../pages/Contacts/ContactList/contacts-list"
 import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 
+import Swort from "../pages/Swort/SwortList/SwortList"
+
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path: "/dashboard-saas", component: DashboardSaas },
@@ -313,6 +315,11 @@ const authProtectedRoutes = [
   { path: "/pages-timeline", component: PagesTimeline },
   { path: "/pages-faqs", component: PagesFaqs },
   { path: "/pages-pricing", component: PagesPricing },
+  { path: "/pages-swort", component: Swort  },
+
+// Swort
+
+/* { path: "/pages-swort", component: Swort  }, */
 
 //   // this route should be at the end of all other routes
 //   // eslint-disable-next-line react/display-name
@@ -330,6 +337,8 @@ const publicRoutes = [
   { path: "/pages-404", component: Pages404 },
   { path: "/pages-500", component: Pages500 },
   { path: "/crypto-ico-landing", component: CryptoIcoLanding },
+
+  
 
 //   // Authentication Inner
   { path: "/pages-login", component: Login1 },
