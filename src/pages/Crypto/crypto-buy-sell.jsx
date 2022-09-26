@@ -99,7 +99,7 @@ const CryptoBuySell = props => {
                       </DropdownMenu>
                     </Dropdown>
                   </div>
-                  <h4 className="card-title mb-4">Buy/Sell Crypto</h4>
+                  <h4 className="card-title mb-4">Comprar</h4>
                   <div className="crypto-buy-sell-nav">
                     <Nav tabs className="nav-tabs-custom" role="tablist">
                       <NavItem>
@@ -111,7 +111,7 @@ const CryptoBuySell = props => {
                             toggleTab("1");
                           }}
                         >
-                          Buy
+                          Comprar
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -123,7 +123,7 @@ const CryptoBuySell = props => {
                             toggleTab("2");
                           }}
                         >
-                          Sell
+                          Venta
                         </NavLink>
                       </NavItem>
                     </Nav>
