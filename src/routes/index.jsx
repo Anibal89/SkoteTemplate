@@ -76,7 +76,7 @@ import Blog from "../pages/Dashboard-Blog/index"
 
 //Bodeguero
 
-import Bodeguero from '../pages/Dashboard-Bodeguero/Bodega/index'
+
 
 // //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
@@ -185,7 +185,7 @@ const authProtectedRoutes = [
   { path: "/blog", component: Blog },
 
 //Bodeguero
-{ path: "/Bodega-uni", component: Bodeguero },
+
 
 
 
