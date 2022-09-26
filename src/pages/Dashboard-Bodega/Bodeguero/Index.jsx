@@ -1,11 +1,23 @@
 import React from 'react'
-import Actividades from './Actividades'
+
+import {
+    Container,
+  } from "reactstrap";
+
+  //Import Breadcrumb
+import Breadcrumbs from "/src/components/Common/Breadcrumb";
 
 const Index = () => {
   return (
-    <div>
-   <Actividades />
-    </div>
+    
+     <div className="page-content">
+        <Container fluid>
+           
+        <Breadcrumbs title="Tasks" breadcrumbItem="Modulo Prueba" />
+        <h1>hola</h1>
+            </Container></div>
+    
+
   )
 }
 
