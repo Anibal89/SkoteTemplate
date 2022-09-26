@@ -15,7 +15,7 @@ const WelcomeComp = () => {
             <Col xs="7">
               <div className="text-primary p-3">
                 <h5 className="text-primary">Bienvenido  !</h5>
-                <p>Skote Dashboard</p>
+                <p>Unisa</p>
               </div>
             </Col>
             <Col xs="5" className="align-self-end">
