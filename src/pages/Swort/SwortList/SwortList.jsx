@@ -96,6 +96,32 @@ const SwortList = () => {
     setListUpdate(true)
   }
 
+  /*---------------------------------------------------------------Metodo Update Roles-------------------------------------------------*/
+
+    // Actualizar Rol Metodo Put 
+    const handleUpdate = (Id_Rol) => {
+    //validacion de datos
+      if (Nombre_Rol === '' || Estado_Rol === '') {
+        alert('todos los campos son obligatorios para actualizar')
+        return
+      }
+      const requestInit = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(ru),
+      }
+      fetch('http://localhost:4000/api/rol/' + Id_Rol, requestInit)
+        .then((res) => res.text())
+        .then((res) => console.log(res))
+  
+      setRu({
+      // Reseteo de input
+        Nombre_Rol: '',
+        Estado_Rol: '',
+      })
+      setListUpdate(true)
+    }
+
   return (
     <>
       <div className="page-content">
@@ -135,8 +161,7 @@ const SwortList = () => {
                               </button>{" "}
                               <button
                                 style={{ color: "#fff" }}
-                                /*      onClick={() => CambiarEstadoRol(!estados)} */
-                                /* onClick={() => handleUpdate(item.Id_Rol)} */
+                                onClick={() => handleUpdate(item.Id_Rol)} 
                                 className="btn btn-warning"
                               >
                                 <i
