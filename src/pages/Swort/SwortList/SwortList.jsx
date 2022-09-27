@@ -22,15 +22,15 @@ const SwortList = () => {
   //meta title
   document.title = "SwortList | Skote - Vite React Admin & Dashboard Template";
 
-  /*----------------------------------------------------------Metodo Get Roles--------------------------------------------------------------------------*/
+  /*----------------------------------------------------------Metodo Get Roles------------------------------------------------------------------------------------------*/
 
-  // Metodo Get del Crud
+  // Metodo Get del Crud rol
   const [rols, setRol] = useState([]);
 
   // Actualizacion de tabla
   const [listUpdate, setListUpdate] = useState(false);
 
-  // Uso de  Metodos Mapeo de datos
+  // Uso de  Metodos Mapeo de datos y estado de actualizacion
   useEffect(() => {
     mapeoDatos();
     setListUpdate(false);
@@ -43,26 +43,46 @@ const SwortList = () => {
     setRol(rols);
   }
 
-  /*--------------------------------------------------------------Meotdo Post Roles----------------------------------------------------------*/
+  /*--------------------------------------------------------------Metodo Post Roles------------------------------------------------------------------------------------*/
 
+  // Uso de estado y metodo 
+  const [ru, setRu] = useState([]) 
 
+  const handleChange = (e) => {
+    setRu({
+      ...ru,
+      [e.target.name]: e.target.value,
+    })
+  }
 
+  // Declaracion de variable
+  let { Nombre_Rol, Estado_Rol } = ru
 
+  const handleSubmit = () => {
+  // validacion de datos
+    if (Nombre_Rol === '' || Estado_Rol === '') {
+      alert('todos los campos son obligatorios')
+      return
+    }
 
+  //
+    const requestInit = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(ru),
+    }
+    fetch('http://localhost:4000/api/rol', requestInit)
+      .then((res) => res.text())
+      .then((res) => console.log(res))
 
-
-
-
-
-
+  // Limpiar inputs de la tabla
+    setRu({
+      Nombre_Rol: '',
+      Estado_Rol: '',
+    })
+  }
 
   /*-----------------------------------------------------------------------------------------------------------------------------------*/
-  
-  
-  
-  
-  const inpRow = [{ name: "", file: "" }];
-  const [inputFields, setinputFields] = useState(inpRow);
 
   return (
     <>
@@ -75,7 +95,7 @@ const SwortList = () => {
               <Card>
                 <CardBody>
                   <CardTitle className="mb-4">
-                    Modulo Swort Art Online - Crud
+                    Tabla de Roles
                   </CardTitle>
                   <div className="table-responsive">
                     <table className="table align-middle table-nowrap mb-0">
@@ -127,10 +147,10 @@ const SwortList = () => {
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
                   <div className="form-row">
                     <div className="form-group col-sm">
-                      <Form>
+                      <Form onSubmit={handleSubmit}>
                         <div className="row mb-4">
                           <Label
-                            htmlFor="horizontal-firstname-Input"
+                            htmlFor="name_rol"
                             className="col-sm-3 col-form-label"
                           >
                             Nombre Rol
@@ -139,24 +159,28 @@ const SwortList = () => {
                             <Input
                               type="text"
                               className="form-control"
-                              id="horizontal-firstname-Input"
                               placeholder="Ingrese el Nombre del rol"
+                              ru={Nombre_Rol}
+                              name="Nombre_Rol"
+                              onChange={handleChange}
                             />
                           </Col>
                         </div>
                         <div className="row mb-4">
                           <Label
-                            htmlFor="horizontal-email-Input"
+                            htmlFor="status_rol"
                             className="col-sm-3 col-form-label"
                           >
                             Estado
                           </Label>
                           <Col sm={9}>
                             <Input
-                              type="email"
+                              type="text"
                               className="form-control"
-                              id="horizontal-email-Input"
                               placeholder="Ingrese el Estado del Rol"
+                              ru={Estado_Rol}
+                              name="Estado_Rol"
+                              onChange={handleChange}
                             />
                           </Col>
                         </div>
