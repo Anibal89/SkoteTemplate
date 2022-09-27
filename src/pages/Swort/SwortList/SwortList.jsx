@@ -82,7 +82,19 @@ const SwortList = () => {
     })
   }
 
-  /*-----------------------------------------------------------------------------------------------------------------------------------*/
+  /*-------------------------------------------------------------Metodo Delete Roles ---------------------------------------------------------------*/
+
+  //Metodo Eliminar Rol
+  const handleDelete = (Id_Rol) => {
+    const requestInit = {
+      method: 'DELETE',
+    }
+    fetch('http://localhost:4000/api/rol/' + Id_Rol, requestInit)
+      .then((res) => res.text())
+      .then((res) => console.log(res))
+
+    setListUpdate(true)
+  }
 
   return (
     <>
@@ -116,7 +128,7 @@ const SwortList = () => {
                             <td>
                               <button
                                 style={{ color: "#fff" }}
-                                /*   onClick={() => handleDelete(item.Id_Rol)} */
+                               onClick={() => handleDelete(item.Id_Rol)}
                                 className="btn btn-danger"
                               >
                                 <i className="bx bx-trash"></i>
