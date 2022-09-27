@@ -81,6 +81,14 @@ import Bodeguero from '../pages/Dashboard-Bodega/Bodeguero/Index'
 
 import CorredorUni from '../pages/Corredor/Detalle/corredoruni'
 
+//Administrador
+
+import Administrador from '../pages/Administrador/Admin/admin'
+
+// Israel
+
+import Israel from '../pages/Israel/IsraelRuben/israelruben'
+
 // //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell"
@@ -182,6 +190,7 @@ import ContactsList from "../pages/Contacts/ContactList/contacts-list"
 import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 
 import Swort from "../pages/Swort/SwortList/SwortList"
+import israelruben from "../pages/Israel/IsraelRuben/israelruben"
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -196,7 +205,12 @@ const authProtectedRoutes = [
 
 { path: "/CorredorUni", component: CorredorUni },
 
+//Administrador
+{ path: "/AdminUni", component: Administrador },
 
+
+// Israel
+{ path: "/IsraelUni", component: israelruben },
 
 
 //   //Crypto
