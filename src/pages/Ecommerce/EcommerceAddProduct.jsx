@@ -20,6 +20,7 @@ import Dropzone from "react-dropzone";
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 
+
 const EcommerceAddProduct = () => {
   
   //meta title
