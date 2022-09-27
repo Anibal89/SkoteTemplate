@@ -10,7 +10,6 @@ import {
   Button,
   Form,
   Input,
-  InputGroup,
 } from "reactstrap";
 
 import "react-datepicker/dist/react-datepicker.css";
