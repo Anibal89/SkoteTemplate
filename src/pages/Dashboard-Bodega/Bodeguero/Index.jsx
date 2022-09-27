@@ -11,14 +11,14 @@ const Index = () => {
   return (
     
      <div className="page-content">
-        <Container fluid>
-           
-        <Breadcrumbs title="Tasks" breadcrumbItem="Modulo Prueba" />
-        <h1>hola</h1>
-            </Container></div>
-    
-
-  )
+      <h1>Requisicion de Materias Primas Y Materiales</h1>
+       <table> 
+        <thead>Datos</thead>
+       </table>
+      </div>
+   
+                       
+ );
 }
 
 export default Index
