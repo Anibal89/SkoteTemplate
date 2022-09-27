@@ -63,9 +63,9 @@ const SwortList = () => {
     if (Nombre_Rol === '' || Estado_Rol === '') {
       alert('todos los campos son obligatorios')
       return
-    }
+    } 
 
-  //
+  // Insertar Registro
     const requestInit = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -163,6 +163,7 @@ const SwortList = () => {
                               ru={Nombre_Rol}
                               name="Nombre_Rol"
                               onChange={handleChange}
+                              required
                             />
                           </Col>
                         </div>
@@ -181,6 +182,7 @@ const SwortList = () => {
                               ru={Estado_Rol}
                               name="Estado_Rol"
                               onChange={handleChange}
+                              required
                             />
                           </Col>
                         </div>
