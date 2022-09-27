@@ -120,6 +120,9 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/Bodega-Unisa">{props.t("Bodega")}</Link>
                 </li>
+                <li>
+                  <Link to="/CorredorUni">{props.t("Corredor")}</Link>
+                </li>
               </ul>
             </li>
 

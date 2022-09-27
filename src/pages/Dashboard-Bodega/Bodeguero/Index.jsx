@@ -21,17 +21,17 @@ import Breadcrumbs from "../../../components/Common/Breadcrumb";
 
 const Index = () => {
 
-  document.title = "Add Product | Skote - Vite React Admin & Dashboard Template";
+  document.title = "Solicitudes | Skote - Vite React Admin & Dashboard Template";
 
   const [selectedFiles, setselectedFiles] = useState([])
 
   const options = [
-    { value: "AK", label: "Alaska" },
-    { value: "HI", label: "Hawaii" },
-    { value: "CA", label: "California" },
-    { value: "NV", label: "Nevada" },
-    { value: "OR", label: "Oregon" },
-    { value: "WA", label: "Washington" },
+    { value: "B1", label: "Bodega 1" },
+    { value: "B2", label: "Bodega 2" },
+    { value: "B3", label: "Bodega 3" },
+    { value: "B4", label: "Bodega 4" },
+    { value: "B5", label: "Bodega 5" },
+    { value: "B6", label: "Bodega 6" },
   ]
 
   function handleAcceptedFiles(files) {
@@ -66,16 +66,16 @@ const Index = () => {
             <Col xs="12">
               <Card>
                 <CardBody>
-                  <CardTitle>Basic Information</CardTitle>
+                  <CardTitle>Requerimientos</CardTitle>
                   <CardSubtitle className="mb-4">
-                    Fill all information below
+                    Materias Primas / Materiales
                   </CardSubtitle>
 
                   <Form>
                     <Row>
                       <Col sm="6">
                         <div className="mb-3">
-                          <Label htmlFor="productname">Product Name</Label>
+                          <Label htmlFor="productname">Codigo del Producto</Label>
                           <Input
                             id="productname"
                             name="productname"
@@ -85,7 +85,7 @@ const Index = () => {
                         </div>
                         <div className="mb-3">
                           <Label htmlFor="manufacturername">
-                            Manufacturer Name
+                            Descripción del Producto
                           </Label>
                           <Input
                             id="manufacturername"
@@ -96,7 +96,7 @@ const Index = () => {
                         </div>
                         <div className="mb-3">
                           <Label htmlFor="manufacturerbrand">
-                            Manufacturer Brand
+                            Sacos Entregados
                           </Label>
                           <Input
                             id="manufacturerbrand"
@@ -106,7 +106,7 @@ const Index = () => {
                           />
                         </div>
                         <div className="mb-3">
-                          <Label htmlFor="price">Price</Label>
+                          <Label htmlFor="price">Libras</Label>
                           <Input
                             id="price"
                             name="price"
@@ -118,26 +118,26 @@ const Index = () => {
 
                       <Col sm="6">
                         <div className="mb-3">
-                          <Label className="control-label">Category</Label>
+                          <Label className="control-label">Supervisor</Label>
                           <select className="form-control select2">
-                            <option>Select</option>
-                            <option value="FA">Fashion</option>
-                            <option value="EL">Electronic</option>
+                            <option value="Lz">Luis Zapeta</option>
+                            <option value="Is">Israel De León</option>
+                            <option value="Wil">Wilson Vásquez</option>
                           </select>
                         </div>
                         <div className="mb-3">
-                          <Label className="control-label">Features</Label>
+                          <Label className="control-label">Bodega</Label>
                           <Select
                             classNamePrefix="select2-selection"
-                            placeholder="Choose..."
-                            title="Country"
+                            placeholder="Buscar..."
+                            title="bodegas"
                             options={options}
                             isMulti
                           />
                         </div>
                         <div className="mb-3">
                           <Label htmlFor="productdesc">
-                            Product Description
+                            Detalles del producto
                           </Label>
                           <textarea
                             className="form-control mb-3"
@@ -149,10 +149,10 @@ const Index = () => {
                     </Row>
                     <div className="d-flex flex-wrap gap-2">
                       <Button type="submit" color="primary" className="btn ">
-                        Save Changes
+                        Grabar
                       </Button>
                       <Button type="submit" color="secondary" className=" ">
-                        Cancel
+                        Cancelar
                       </Button>
                     </div>
                   </Form>
