@@ -60,10 +60,10 @@ const SwortList = () => {
 
   const handleSubmit = () => {
   // validacion de datos
-    if (Nombre_Rol === '' || Estado_Rol === '') {
+    /* if (Nombre_Rol === '' || Estado_Rol === '') {
       alert('todos los campos son obligatorios')
       return
-    } 
+    }  */
 
   // Insertar Registro
     const requestInit = {
@@ -74,7 +74,7 @@ const SwortList = () => {
     fetch('http://localhost:4000/api/rol', requestInit)
       .then((res) => res.text())
       .then((res) => console.log(res))
-
+      setListUpdate(true)
   // Limpiar inputs de la tabla
     setRu({
       Nombre_Rol: '',
@@ -183,8 +183,7 @@ const SwortList = () => {
                 <CardBody>
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
                   <div className="form-row">
-                    <div className="form-group col-sm">
-                      <Form onSubmit={handleSubmit}>
+                    <div className="form-group col-sm"> 
                         <div className="row mb-4">
                           <Label
                             htmlFor="name_rol"
@@ -195,7 +194,7 @@ const SwortList = () => {
                           <Col sm={9}>
                             <Input
                               type="text"
-                              className="form-control"
+                              className="form-control" 
                               placeholder="Ingrese el Nombre del rol"
                               ru={Nombre_Rol}
                               name="Nombre_Rol"
@@ -230,15 +229,15 @@ const SwortList = () => {
                                 type="submit"
                                 color="primary"
                                 className="w-md"
+                                onClick={() => handleSubmit()}
                               >
                                 Agregar
                               </Button>
                             </div>
                           </Col>
                         </div>
-                      </Form>
                     </div>
-                  </div>
+                  </div> 
                 </CardBody>
               </Card>
             </Col>
