@@ -62,7 +62,7 @@ const SwortList = () => {
   // validacion de datos
      if (Nombre_Rol === '' || Estado_Rol === '') {
       alert('todos los campos son obligatorios')
-      return false
+      return 
     } 
 
   // Insertar Registro
@@ -74,7 +74,7 @@ const SwortList = () => {
     fetch('http://localhost:4000/api/rol', requestInit)
       .then((res) => res.text())
       .then((res) => console.log(res))
-      setListUpdate(true)
+     /*  setListUpdate(true) */
   // Limpiar inputs de la tabla
     setRu({
       Nombre_Rol: '',
@@ -103,7 +103,7 @@ const SwortList = () => {
     //validacion de datos
       if (Nombre_Rol === '' || Estado_Rol === '') {
         alert('todos los campos son obligatorios para actualizar')
-        return
+        return 
       }
       const requestInit = {
         method: 'PUT',
@@ -116,9 +116,9 @@ const SwortList = () => {
   
       setRu({
       // Reseteo de input
-        Nombre_Rol: '',
-        Estado_Rol: '',
-      })
+        Nombre_Rol: ' ',
+        Estado_Rol: ' ',
+      }) 
       setListUpdate(true)
     }
 
@@ -162,6 +162,7 @@ const SwortList = () => {
                               <button
                                 style={{ color: "#fff" }}
                                 onClick={() => handleUpdate(item.Id_Rol)} 
+                                onLoad
                                 className="btn btn-warning"
                               >
                                 <i
@@ -184,7 +185,7 @@ const SwortList = () => {
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
                   <div className="form-row">
                     <div className="form-group col-sm"> 
-                
+                    <Form onSubmit={handleSubmit}>
                         <div className="row mb-4">
                           <Label
                             htmlFor="name_rol"
@@ -197,8 +198,9 @@ const SwortList = () => {
                               type="text"
                               className="form-control" 
                               placeholder="Ingrese el Nombre del rol"
-                              ru={Nombre_Rol}
+                              value={Nombre_Rol}
                               name="Nombre_Rol"
+                              pattern="[a-zA-Z ]{2,254}"
                               onChange={handleChange}
                             />
                           </Col>
@@ -215,8 +217,9 @@ const SwortList = () => {
                               type="text"
                               className="form-control"
                               placeholder="Ingrese el Estado del Rol"
-                              ru={Estado_Rol}
+                              value={Estado_Rol}
                               name="Estado_Rol"
+                              pattern="[a-zA-Z ]{2,254}"
                               onChange={handleChange}
                             />
                           </Col>
@@ -228,14 +231,14 @@ const SwortList = () => {
                                 type="submit"
                                 color="primary"
                                 className="w-md"
-                                onClick={() => handleSubmit()}
+                             /*    onClick={() => handleSubmit()} */
                               >
                                 Agregar
                               </Button>
                             </div>
                           </Col>
                         </div>
-                
+                        </Form>
                     </div>
                   </div> 
                 </CardBody>
