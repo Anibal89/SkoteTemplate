@@ -77,6 +77,10 @@ import Blog from "../pages/Dashboard-Blog/index"
 //Bodeguero
 import Bodeguero from '../pages/Dashboard-Bodega/Bodeguero/Index'
 
+//Corredor
+
+import CorredorUni from '../pages/Corredor/Detalle/corredoruni'
+
 // //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell"
@@ -187,6 +191,10 @@ const authProtectedRoutes = [
 
 //Bodeguero
 { path: "/Bodega-Unisa", component: Bodeguero },
+
+//Corredor
+
+{ path: "/CorredorUni", component: CorredorUni },
 
 
 
