@@ -60,10 +60,10 @@ const SwortList = () => {
 
   const handleSubmit = () => {
   // validacion de datos
-    /* if (Nombre_Rol === '' || Estado_Rol === '') {
+     if (Nombre_Rol === '' || Estado_Rol === '') {
       alert('todos los campos son obligatorios')
-      return
-    }  */
+      return false
+    } 
 
   // Insertar Registro
     const requestInit = {
@@ -184,6 +184,7 @@ const SwortList = () => {
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
                   <div className="form-row">
                     <div className="form-group col-sm"> 
+                
                         <div className="row mb-4">
                           <Label
                             htmlFor="name_rol"
@@ -199,7 +200,6 @@ const SwortList = () => {
                               ru={Nombre_Rol}
                               name="Nombre_Rol"
                               onChange={handleChange}
-                              required
                             />
                           </Col>
                         </div>
@@ -218,7 +218,6 @@ const SwortList = () => {
                               ru={Estado_Rol}
                               name="Estado_Rol"
                               onChange={handleChange}
-                              required
                             />
                           </Col>
                         </div>
@@ -236,6 +235,7 @@ const SwortList = () => {
                             </div>
                           </Col>
                         </div>
+                
                     </div>
                   </div> 
                 </CardBody>
