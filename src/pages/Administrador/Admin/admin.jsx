@@ -13,7 +13,7 @@ const admin = () => {
 
   React.useEffect(() =>{
     function getData(){
-      fetch("http://localhost:4000/api/rol")
+      fetch("http://localhost:4000/api/materiales")
       .then((res) => res.json())
       .then ((dato) => setUsuarios(dato) );
 
@@ -25,22 +25,22 @@ const admin = () => {
     <div className="page-content">
         <Container fluid>
           <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Estado</th>
+            <th>Codigo</th>
+            <th>Descripción</th>
+            <th>Existencia</th>
+            <th>Bodega</th>
 
           </tr>
           
           {/* Mostrando en pantalla los datos de usuarios */}
           {usuarios && usuarios.map((item) =>
-            <tr key={item.Id_Rol}>
-            <th>{item.Id_Rol}</th>
-            <td>{item.Nombre_Rol}</td>
-            <td>{item.Estado_Rol}</td>
-          
+            <tr key={item.codigo_material}>
+            <th>{item.codigo_material}</th>
+            <td>{item.descripcion_material}</td>
+            <td>{item.existencia_material}</td>
+            <td>{item.bodega_material}</td>
               </tr>
-
-            
+              
           )}
 
         </Container>
