@@ -13,12 +13,13 @@ import {
   Modal,
 } from "reactstrap";
 
-import "react-datepicker/dist/react-datepicker.css";
 
 //Import Breadcrumb
 import Breadcrumbs from "/src/components/Common/Breadcrumb";
 
+
 const SwortList = () => {
+
   //meta title
   document.title = "SwortList | Skote - Vite React Admin & Dashboard Template";
 
@@ -59,14 +60,9 @@ const SwortList = () => {
     setRol(rols);
   };
 
-
   /*--------------------------------------------------------------Select ----------------------------------------------------------------*/
 
   //De Luis Zapeta
-
-
-
-
 
   /*--------------------------------------------------------------Metodo Post Roles------------------------------------------------------------------------------------*/
 
@@ -146,7 +142,6 @@ const SwortList = () => {
     });
     setListUpdate(true);
   };
-
 
   return (
     <>
@@ -274,15 +269,15 @@ const SwortList = () => {
                               <button
                                 style={{ color: "#fff" }}
                                 onClick={() => handleUpdate(item.Id_Rol)}
-                                onLoad
+                              
                                 className="btn btn-warning"
                               >
                                 <i
                                   className="dripicons-alarm"
                                   style={{ width: "125px", height: "30px" }}
                                 ></i>
-                              </button> 
-                            {/*   <button
+                              </button>
+                              {/*   <button
                                 type="button"
                                 className="btn btn-primary "
                                 onClick={() => {
@@ -297,7 +292,7 @@ const SwortList = () => {
                       </tbody>
                     </table>
 
-  {/*                   {rols.entries((item) => (
+                    {/*                   {rols.entries((item) => (
                     
                     <Modal
                       isOpen={modal_center2}
@@ -381,7 +376,6 @@ const SwortList = () => {
                        
                     </Modal>
    ))} */}
-
                   </div>
                 </CardBody>
               </Card>
@@ -390,9 +384,9 @@ const SwortList = () => {
               <Card>
                 <CardBody>
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
-                       <div className="form-row">
+                  <div className="form-row">
                     <div className="form-group col-sm">
-                      <Form onSubmit={handleSubmit}>
+                      <Form onSubmit={handleSubmit} >
                         <div className="row mb-4">
                           <Label
                             htmlFor="name_rol"
@@ -401,7 +395,7 @@ const SwortList = () => {
                             Nombre Rol
                           </Label>
                           <Col sm={9}>
-                            <Input
+                           <Input
                               type="text"
                               className="form-control"
                               placeholder="Ingrese el Nombre del rol"
@@ -409,7 +403,7 @@ const SwortList = () => {
                               name="Nombre_Rol"
                               pattern="[a-zA-Z ]{2,254}"
                               onChange={handleChange}
-                            />
+                            /> 
                           </Col>
                         </div>
                         <div className="row mb-4">
@@ -438,7 +432,7 @@ const SwortList = () => {
                                 type="submit"
                                 color="primary"
                                 className="w-md"
-                             /*    onClick={() => handleSubmit()}  */
+                                /*    onClick={() => handleSubmit()}  */
                               >
                                 Agregar
                               </Button>
@@ -447,7 +441,7 @@ const SwortList = () => {
                         </div>
                       </Form>
                     </div>
-                  </div> 
+                  </div>
                 </CardBody>
               </Card>
             </Col>

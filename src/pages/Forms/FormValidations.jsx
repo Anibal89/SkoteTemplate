@@ -193,7 +193,7 @@ const FormValidations = () => {
     setValidation(modifiedV);
   }
 
-  //for change tooltip display propery
+    //for change tooltip display propery
   const onChangeValidation = (fieldName, value) => {
     const modifiedV = { ...validation };
     if (value !== "") {
