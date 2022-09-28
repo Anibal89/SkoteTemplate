@@ -13,13 +13,32 @@ import {
   Modal,
 } from "reactstrap";
 
+import { Doughnut } from "react-chartjs-2"
 
+
+
+const DountChart1 = () => {
+  const data = {
+    labels: ["Roles", "Estados"],
+    datasets: [
+      {
+        data: [300, 210],
+        backgroundColor: ["#556ee6", "#EF381B"],
+        hoverBackgroundColor: ["#ebeff2", "#ebeff2"],
+        hoverBorderColor: "#fff",
+      },
+    ],
+  }
+
+  return <Doughnut width={474} height={260} data={data} />
+}
+
+
+import Pie from "../../AllCharts/echart/piechart"
 //Import Breadcrumb
 import Breadcrumbs from "/src/components/Common/Breadcrumb";
 
-
 const SwortList = () => {
-
   //meta title
   document.title = "SwortList | Skote - Vite React Admin & Dashboard Template";
 
@@ -269,7 +288,6 @@ const SwortList = () => {
                               <button
                                 style={{ color: "#fff" }}
                                 onClick={() => handleUpdate(item.Id_Rol)}
-                              
                                 className="btn btn-warning"
                               >
                                 <i
@@ -386,7 +404,7 @@ const SwortList = () => {
                   <CardTitle className="mb-4">Formulario - Crud</CardTitle>
                   <div className="form-row">
                     <div className="form-group col-sm">
-                      <Form onSubmit={handleSubmit} >
+                      <Form onSubmit={handleSubmit}>
                         <div className="row mb-4">
                           <Label
                             htmlFor="name_rol"
@@ -395,7 +413,7 @@ const SwortList = () => {
                             Nombre Rol
                           </Label>
                           <Col sm={9}>
-                           <Input
+                            <Input
                               type="text"
                               className="form-control"
                               placeholder="Ingrese el Nombre del rol"
@@ -403,7 +421,7 @@ const SwortList = () => {
                               name="Nombre_Rol"
                               pattern="[a-zA-Z ]{2,254}"
                               onChange={handleChange}
-                            /> 
+                            />
                           </Col>
                         </div>
                         <div className="row mb-4">
@@ -441,6 +459,29 @@ const SwortList = () => {
                         </div>
                       </Form>
                     </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm>
+              <Card>
+                <CardBody>
+                  <CardTitle className="mb-4">Grafica de Dona</CardTitle>
+
+                  <div id="doughnut-chart" className="e-chart">
+                    <DountChart1 />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col sm>
+              <Card>
+                <CardBody>
+                  <CardTitle className="mb-4">Grafica de dona 2</CardTitle>
+                  <div id="pie-chart" className="e-chart">
+                    <Pie />
                   </div>
                 </CardBody>
               </Card>
