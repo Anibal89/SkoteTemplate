@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
+
+
+
 import {
     Container,
   } from "reactstrap";
@@ -20,75 +23,88 @@ const CorredorUni = () => {
             <th>Sacos Entregado</th>
             <th>Cantidad en Libras</th>
             <th>Total en Libras</th>
+            <th>Existencia</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <input type="number"  placeholder="Codigo"/>
+                <input type="number"  />
             </td>
             <td>
-                <input type="text"  placeholder="Descripción"/>
+                <input type="text"  />
             </td>
             <td>
-                <input type="text" placeholder="Cantidad Sacos" />
+                <input type="text"  />
             </td>
             <td>
-                <input type="number" placeholder="Libras" />
+                <input type="number"  />
             </td>
             <td>
-                <input type="number" placeholder="Totales" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="number"  placeholder="Codigo"/>
+                <input type="number"  />
             </td>
             <td>
-                <input type="text"  placeholder="Descripción"/>
-            </td>
-            <td>
-                <input type="text" placeholder="Cantidad Sacos" />
-            </td>
-            <td>
-                <input type="number" placeholder="Libras" />
-            </td>
-            <td>
-                <input type="number" placeholder="Totales" />
+                <input type="number"  />
             </td>
         </tr>
         <tr>
             <td>
-                <input type="number"  placeholder="Codigo"/>
+                <input type="number"  />
             </td>
             <td>
-                <input type="text"  placeholder="Descripción"/>
+                <input type="text"  />
             </td>
             <td>
-                <input type="text" placeholder="Cantidad Sacos" />
+                <input type="text"  />
             </td>
             <td>
-                <input type="number" placeholder="Libras" />
+                <input type="number"  />
             </td>
             <td>
-                <input type="number" placeholder="Totales" />
+                <input type="number"  />
+            </td>
+            <td>
+                <input type="number"  />
             </td>
         </tr>
         <tr>
             <td>
-                <input type="number"  placeholder="Codigo"/>
+                <input type="number"  />
             </td>
             <td>
-                <input type="text"  placeholder="Descripción"/>
+                <input type="text"  />
             </td>
             <td>
-                <input type="text" placeholder="Cantidad Sacos" />
+                <input type="text"  />
             </td>
             <td>
-                <input type="number" placeholder="Libras" />
+                <input type="number"  />
             </td>
             <td>
-                <input type="number" placeholder="Totales" />
+                <input type="number"  />
+            </td>
+            <td>
+                <input type="number"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" />
+            </td>
+            <td>
+                <input type="text"  />
+            </td>
+            <td>
+                <input type="text"  />
+            </td>
+            <td>
+                <input type="number"  />
+            </td>
+            <td>
+                <input type="number"  />
+            </td>
+            <td>
+                <input type="number"  />
             </td>
         </tr>
         <br />
@@ -103,6 +119,9 @@ const CorredorUni = () => {
             </td>
             <td>
                 <input type="text" />
+            </td>
+            <td>
+                <button className="GrabarRequi">Grabar</button>
             </td>
         </tr>
         
