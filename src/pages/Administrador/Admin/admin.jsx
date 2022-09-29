@@ -13,7 +13,7 @@ const admin = () => {
 
   React.useEffect(() =>{
     function getData(){
-      fetch("http://localhost:4000/api/materiales")
+      fetch("http://localhost:4000/api/materiales/")
       .then((res) => res.json())
       .then ((dato) => setUsuarios(dato) );
 
