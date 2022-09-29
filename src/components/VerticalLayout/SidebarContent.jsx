@@ -129,6 +129,8 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/IsraelUni"> {props.t("Israel")}</Link>
                 </li>
+              
+
               </ul>
             </li>
 

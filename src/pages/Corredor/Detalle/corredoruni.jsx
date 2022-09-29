@@ -2,11 +2,33 @@ import React, {useState} from "react";
 
 import Select from "react-select";
 
-
 const options =[
     { value: "Du", label: "Duro" },
     { value: "De", label: "Desperdicio" },
 
+
+]
+
+const opRecepcion =[
+    { value: "alta", label: "Alta"},
+    { value: "baja", label: "Baja"},
+    { value: "mixta", label: "Alta Color Mixta"},
+    { value: "negro", label: "Alta Negro"},
+    { value: "virgen negro", label: "Alta Virgen Negro"},
+    { value: "natural", label: "Alta Natural"},
+]
+
+const maquinas =[
+    { value: "Maq", label: "Máq. 01" },
+    { value: "Maq", label: "Maq. 02" },
+    { value: "Maq", label: "Máq. 03" },
+    { value: "Maq", label: "Maq. 04" },
+    { value: "Maq", label: "Máq. 05" },
+    { value: "Maq", label: "Maq. 06" },
+    { value: "Maq", label: "Máq. 07" },
+    { value: "Maq", label: "Maq. 08" },
+    { value: "Maq", label: "Máq. 09" },
+    { value: "Maq", label: "Maq. 10" },
 ]
 
 
@@ -21,6 +43,7 @@ const CorredorUni = () => {
       <Container fluid>
         <div>
             <h4>Datos Ingresados del corredor</h4>
+        
         <table class="table table-responsive">
     <thead>
         <tr>
@@ -33,15 +56,23 @@ const CorredorUni = () => {
     </thead>
     <tbody>
         <tr>
+            
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select
+                classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={maquinas}
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="text"  />
             </td>
             <td>
             <div className="mb-3">
-                
              <Select
                 classNamePrefix="select2-selection"
                 placeholder="Buscar..."
@@ -52,8 +83,16 @@ const CorredorUni = () => {
             </div>
 
             </td>
-            <td>
-                <input type="number"  />
+            <td  >
+            <div className="mb-10">
+             <Select 
+                classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={opRecepcion }
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="number"  />
@@ -62,14 +101,21 @@ const CorredorUni = () => {
         </tr>
         <tr>
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select
+                classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={maquinas}
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="text"  />
             </td>
             <td>
             <div className="mb-3">
-                <label htmlFor=""></label>
              <Select
                 classNamePrefix="select2-selection"
                 placeholder="Buscar..."
@@ -79,8 +125,19 @@ const CorredorUni = () => {
                 />
             </div> 
             </td>
+
+            {/* Celda Recepcion*/}
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select 
+                // classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={opRecepcion }
+                // isMulti
+                />
+            </div>
+
             </td>
             <td>
                 <input type="number"  />
@@ -89,14 +146,21 @@ const CorredorUni = () => {
         </tr>
         <tr>
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select
+                classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={maquinas}
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="text"  />
             </td>
             <td>
             <div className="mb-3">
-                <label htmlFor=""></label>
              <Select
                 classNamePrefix="select2-selection"
                 placeholder="Buscar..."
@@ -106,7 +170,15 @@ const CorredorUni = () => {
             </div>
             </td>
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select 
+                // classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={opRecepcion }
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="number"  />
@@ -115,7 +187,15 @@ const CorredorUni = () => {
         </tr>
         <tr>
             <td>
-                <input type="number" />
+            <div className="mb-3">
+             <Select
+                classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={maquinas}
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="text"  />
@@ -123,7 +203,6 @@ const CorredorUni = () => {
 
             <td>
             <div className="mb-3">
-                <label htmlFor=""></label>
              <Select
                 classNamePrefix="select2-selection"
                 placeholder="Buscar..."
@@ -134,7 +213,15 @@ const CorredorUni = () => {
 
             </td>
             <td>
-                <input type="number"  />
+            <div className="mb-3">
+             <Select 
+                // classNamePrefix="select2-selection"
+                placeholder="Buscar..."
+                title="bodegas"
+                options={opRecepcion }
+                // isMulti
+                />
+            </div>
             </td>
             <td>
                 <input type="text" />
@@ -144,16 +231,26 @@ const CorredorUni = () => {
         <br />
         <br />
         <tr>
+            <th></th>
+            <th></th>
             <th>Solicitado por</th>
             <th>Entregado Por</th>
         </tr>
         <tr>
             <td>
-                <input type="text" />
+               
             </td>
             <td>
-                <input type="text" />
+               
             </td>
+            <td>
+            <input type="text" />
+            </td>
+            <td>
+            <input type="text" />
+            </td>
+
+            
             <td>
                 <button className="GrabarRequi">Grabar</button>
             </td>
