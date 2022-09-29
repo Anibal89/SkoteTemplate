@@ -132,7 +132,7 @@ const Index = () => {
                             placeholder="Buscar..."
                             title="bodegas"
                             options={options}
-                            isMulti
+                           // isMulti
                           />
                         </div>
                         <div className="mb-3">
