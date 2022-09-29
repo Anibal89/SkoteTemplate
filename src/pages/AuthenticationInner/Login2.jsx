@@ -47,11 +47,11 @@ const Login2 = () => {
                   <div className="d-flex flex-column h-100">
                     <div className="mb-4 mb-md-5">
                       <Link to="/dashboard" className="d-block auth-logo">
-                        <img
+                        <img style={{objectFit: 'cover'}}
                           src={logounisa}
                           alt=""
-                          width="100px"
-                          height="50px"
+                          width="230px"
+                          height="70px"
                           className="auth-logo-dark"
                         />
                         <img
@@ -64,9 +64,9 @@ const Login2 = () => {
                     </div>
                     <div className="my-auto">
                       <div>
-                        <h5 className="text-primary">Welcome Back !</h5>
+                        <h5 className="text-primary">Bienvenido !!</h5>
                         <p className="text-muted">
-                          Sign in to continue to Skote.
+                          Ingresa a tu cuenta y sigue en UNISA.
                         </p>
                       </div>
 
@@ -79,11 +79,11 @@ const Login2 = () => {
                           }}
                         >
                           <div className="mb-3">
-                            <Label className="form-label">Email</Label>
+                            <Label className="form-label">Correo</Label>
                             <Input
                               name="email"
                               className="form-control"
-                              placeholder="Enter email"
+                              placeholder="Ingresa tu correo"
                               type="email"
                               onChange={validation.handleChange}
                               onBlur={validation.handleBlur}
@@ -98,12 +98,12 @@ const Login2 = () => {
                           </div>
 
                           <div className="mb-3">
-                            <Label className="form-label">Password</Label>
+                            <Label className="form-label">Contraseña</Label>
                             <Input
                               name="password"
                               value={validation.values.password || ""}
                               type="password"
-                              placeholder="Enter Password"
+                              placeholder="Ingresa tu contraseña"
                               onChange={validation.handleChange}
                               onBlur={validation.handleBlur}
                               invalid={
@@ -134,7 +134,7 @@ const Login2 = () => {
                               className="btn btn-primary btn-block "
                               type="submit"
                             >
-                              Log In
+                              Ingresar
                             </button>
                           </div>
 
