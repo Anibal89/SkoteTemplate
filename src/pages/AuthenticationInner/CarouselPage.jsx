@@ -17,7 +17,7 @@ const CarouselPage = () => {
                     <div className="text-center">
                       <h4 style={{color: '#fff'}} className="mb-3">
                         <i className="bx bxs-quote-alt-left text-primary h1 align-middle me-3"></i>
-                        <span className="text-primary">UNI</span> S.A.
+                        <span className="">UNI</span> S.A.
                       </h4>
                       <div dir="ltr">
                         <Carousel showThumbs={false} className="slider_css">
@@ -29,7 +29,7 @@ const CarouselPage = () => {
                                 </p>
 
                                 <div>
-                                  <h4 className="font-size-16 text-primary">
+                                  <h4 style={{color: '#fff'}} className="font-size-16">
                                     2022
                                   </h4>
                                   <p className="font-size-14 mb-0">
@@ -47,7 +47,7 @@ const CarouselPage = () => {
                                 </p>
 
                                 <div>
-                                  <h4 className="font-size-16 text-primary">
+                                  <h4 style={{color: '#fff'}} className="font-size-16">
                                     2022
                                   </h4>
                                   <p className="font-size-14 mb-0">
