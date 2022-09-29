@@ -34,7 +34,7 @@ const Sidebar = props => {
               <img src={logoLightSvg} alt="" height="22" />
             </span>
             <span className="logo-lg">
-              <img src={logoLightPng} alt="" width="100" height="50" />
+              <img style={{objectFit: 'cover'}} src={logoLightPng} alt="" width="150" height="50" />
             </span>
           </Link>
         </div>
