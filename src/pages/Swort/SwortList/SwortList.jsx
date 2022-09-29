@@ -13,28 +13,8 @@ import {
   Modal,
 } from "reactstrap";
 
-import { Doughnut } from "react-chartjs-2"
-
-
-
-const DountChart1 = () => {
-  const data = {
-    labels: ["Roles", "Estados"],
-    datasets: [
-      {
-        data: [300, 210],
-        backgroundColor: ["#556ee6", "#EF381B"],
-        hoverBackgroundColor: ["#ebeff2", "#ebeff2"],
-        hoverBorderColor: "#fff",
-      },
-    ],
-  }
-
-  return <Doughnut width={474} height={260} data={data} />
-}
-
-
 import Pie from "../../AllCharts/echart/piechart"
+import Line from "../../AllCharts/echart/linechart"
 //Import Breadcrumb
 import Breadcrumbs from "/src/components/Common/Breadcrumb";
 
@@ -168,7 +148,7 @@ const SwortList = () => {
         <Container fluid>
           {/* Render Breadcrumbs */}
           <Breadcrumbs title="Tasks" breadcrumbItem="Modulo Prueba" />
-          <Row>
+          <Row sm>
             <Col sm>
               <Card>
                 <CardBody>
@@ -291,7 +271,7 @@ const SwortList = () => {
                                 className="btn btn-warning"
                               >
                                 <i
-                                  className="dripicons-alarm"
+                                  className="dripicons-pencil"
                                   style={{ width: "125px", height: "30px" }}
                                 ></i>
                               </button>
@@ -401,7 +381,7 @@ const SwortList = () => {
             <Col sm>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Formulario - Crud</CardTitle>
+                  <CardTitle className="mb-4">Formulario Actualizacion Rol</CardTitle>
                   <div className="form-row">
                     <div className="form-group col-sm">
                       <Form onSubmit={handleSubmit}>
@@ -446,14 +426,14 @@ const SwortList = () => {
                         <div className="row justify-content-end">
                           <Col sm={9}>
                             <div>
-                              <Button
+                           {/*    <Button
                                 type="submit"
                                 color="primary"
                                 className="w-md"
-                                /*    onClick={() => handleSubmit()}  */
+                                  onClick={() => handleSubmit()}  
                               >
-                                Agregar
-                              </Button>
+                                
+                              </Button> */}
                             </div>
                           </Col>
                         </div>
@@ -464,14 +444,14 @@ const SwortList = () => {
               </Card>
             </Col>
           </Row>
-          <Row>
+          <Row sm>
             <Col sm>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Grafica de Dona</CardTitle>
+                  <CardTitle className="mb-4">Grafica Lineal</CardTitle>
 
-                  <div id="doughnut-chart" className="e-chart">
-                    <DountChart1 />
+                  <div id="line-chart" className="e-chart">
+                    <Line />
                   </div>
                 </CardBody>
               </Card>
@@ -479,7 +459,7 @@ const SwortList = () => {
             <Col sm>
               <Card>
                 <CardBody>
-                  <CardTitle className="mb-4">Grafica de dona 2</CardTitle>
+                  <CardTitle className="mb-4">Grafica Circular </CardTitle>
                   <div id="pie-chart" className="e-chart">
                     <Pie />
                   </div>

@@ -55,13 +55,15 @@
         border-radius: 50%;
     }
 
+
     .bg-overlay{
-        background: url("/src/assets/images/Fondo3.jpg");
+        background-image:linear-gradient(to top, #1a1c2794 100%, #02020203 100%), url("/src/assets/images/Fondo3.jpg") ;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
 }
+
 
 .auth-full-page-content{
     display: flex;

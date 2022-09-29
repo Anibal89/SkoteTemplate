@@ -16,7 +16,7 @@ const Line = () => {
     },
     xAxis: {
       type: "category",
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      data: ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"],
       axisLable: {
         color: "#ffffff",
       },
@@ -39,7 +39,7 @@ const Line = () => {
     },
     series: [
       {
-        data: [620, 832, 750, 934, 1290, 1330, 1400],
+        data: [10, 5, 15, 25, 30, 25, 10],
         type: "line",
       },
     ],
