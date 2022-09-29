@@ -7,9 +7,10 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 
 // import images
-import logodark from "../../assets/images/logo-dark.png";
+// import logodark from "../../assets/images/logo-dark.png";
 import logolight from "../../assets/images/logo-light.png";
 import CarouselPage from "./CarouselPage";
+import logounisa from "../../assets/images/logounisa.png";
 
 const Login2 = () => {
 
@@ -22,8 +23,8 @@ const Login2 = () => {
     enableReinitialize: true,
 
     initialValues: {
-      email: 'admin@themesbrand.com' || '',
-      password: '123456' || '',
+      email: '',
+      password: '',
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
@@ -41,15 +42,16 @@ const Login2 = () => {
             <CarouselPage />
 
             <Col xl={3}>
-              <div className="auth-full-page-content p-md-5 p-4">
+              <div className="mt-5 p-md-5 p-4">
                 <div className="w-100">
                   <div className="d-flex flex-column h-100">
                     <div className="mb-4 mb-md-5">
                       <Link to="/dashboard" className="d-block auth-logo">
                         <img
-                          src={logodark}
+                          src={logounisa}
                           alt=""
-                          height="18"
+                          width="100px"
+                          height="50px"
                           className="auth-logo-dark"
                         />
                         <img
@@ -113,7 +115,7 @@ const Login2 = () => {
                             ) : null}
                           </div>
 
-                          <div className="form-check">
+                          {/* <div className="form-check">
                             <Input
                               type="checkbox"
                               className="form-check-input"
@@ -125,7 +127,7 @@ const Login2 = () => {
                             >
                               Remember me
                             </label>
-                          </div>
+                          </div> */}
 
                           <div className="mt-3 d-grid">
                             <button
@@ -138,7 +140,7 @@ const Login2 = () => {
 
                         </Form>
 
-                        <Form action="dashboard">
+                        {/* <Form action="dashboard">
                           <div className="mt-4 text-center">
                             <h5 className="font-size-14 mb-3">
                               Sign in with
@@ -171,8 +173,9 @@ const Login2 = () => {
                               </li>
                             </ul>
                           </div>
-                        </Form>
-                        <div className="mt-5 text-center">
+                        </Form> */}
+
+                        {/* <div className="mt-5 text-center">
                           <p>
                             Don&apos;t have an account ?
                             <Link
@@ -182,15 +185,15 @@ const Login2 = () => {
                               Signup now
                             </Link>
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
                     <div className="mt-4 mt-md-5 text-center">
                       <p className="mb-0">
-                        © {new Date().getFullYear()} Skote. Crafted with{" "}
-                        <i className="mdi mdi-heart text-danger"></i> by
-                        Themesbrand
+                        © {new Date().getFullYear()} UNISA - Derechos{" "}
+                        {/* <i className="mdi mdi-heart text-danger"></i> by */}
+                        Reservados
                       </p>
                     </div>
                   </div>
@@ -205,3 +208,4 @@ const Login2 = () => {
 };
 
 export default Login2;
+

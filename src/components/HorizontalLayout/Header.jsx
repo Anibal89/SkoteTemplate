@@ -29,6 +29,7 @@ import dropbox from "../../assets/images/brands/dropbox.png";
 import mail_chimp from "../../assets/images/brands/mail_chimp.png";
 import slack from "../../assets/images/brands/slack.png";
 
+
 //i18n
 import { withTranslation } from "react-i18next";
 
