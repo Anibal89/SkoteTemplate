@@ -19,12 +19,12 @@ import { Doughnut } from "react-chartjs-2"
 
 const DountChart1 = () => {
   const data = {
-    labels: ["Roles", "Estados"],
+    labels: ["Roles", "Estados", "Usuarios"],
     datasets: [
       {
-        data: [300, 210],
-        backgroundColor: ["#556ee6", "#EF381B"],
-        hoverBackgroundColor: ["#ebeff2", "#ebeff2"],
+        data: [300, 210, 300],
+        backgroundColor: ["#556ee6", "#EF381B","#94C375"],
+        hoverBackgroundColor: ["#ebeff2", "#ebeff2", "#ebeff2"],
         hoverBorderColor: "#fff",
       },
     ],
