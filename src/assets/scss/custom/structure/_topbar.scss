@@ -100,10 +100,12 @@
   .logo {
     span.logo-lg {
       display: none;
+      object-fit: cover;
     }
 
     span.logo-sm {
       display: inline-block;
+      object-fit: cover;
     }
   }
 }
