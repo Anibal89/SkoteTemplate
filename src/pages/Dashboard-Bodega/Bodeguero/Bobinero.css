@@ -1,0 +1,25 @@
+.bodyBobinero{
+    color: black;
+    
+}
+
+.styleTD{
+    color: #000;
+   
+}
+
+.styleButton{
+cursor: help;
+background-color: rgba(0, 119, 255, 0.897);
+margin-bottom: 1rem;
+margin: 2rem;
+box-shadow: 7px 15px 8px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px 15px 8px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 15px 8px 0px rgba(0,0,0,0.75);
+    
+}
+
+.styleButton:hover {
+    background-color: #008CBA;
+    color: white;
+}
