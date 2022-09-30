@@ -2,9 +2,9 @@
     margin-top: 2rem;
 }
 .font__size{
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
 }
 .center{
-    vertical-align: auto;
+    vertical-align:middle;
 }
