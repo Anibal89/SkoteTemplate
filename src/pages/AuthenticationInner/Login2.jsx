@@ -15,7 +15,7 @@ import logounisa from "../../assets/images/logounisa.png";
 const Login2 = () => {
 
   //meta title
-  document.title="Login 2 | Skote - Vite React Admin & Dashboard Template";
+  document.title="Login 2 | Unisa S.A";
 
   // Form validation 
   const validation = useFormik({
