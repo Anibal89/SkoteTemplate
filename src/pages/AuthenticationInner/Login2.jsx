@@ -130,13 +130,16 @@ const Login2 = () => {
                           </div> */}
 
                           <div className="mt-3 d-grid">
+                          <Link to="/#" className="">
                             <button
                               className="btn btn-primary btn-block "
                               type="submit"
                             >
                               Ingresar
                             </button>
+                            </Link>
                           </div>
+                          
 
                         </Form>
 
