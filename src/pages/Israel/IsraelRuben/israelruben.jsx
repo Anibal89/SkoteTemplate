@@ -13,6 +13,7 @@ const israelruben = () => {
          <Breadcrumbs title="Inicio" breadcrumbItem="Modulo Bodeguero" />
         <div>
 
+            {/*  Formulario de ingreso bodega  */}
          <form className="row g-3 formulario__size">
 
          <div className="col-md-3">
@@ -124,7 +125,30 @@ const israelruben = () => {
           <div className="col-12">
             <button type="submit" className="btn btn-primary">INGRESAR</button>
           </div>
-</form>  
+  </form>  
+
+  {/* tabla en donde se guardan los datos de formulario */}
+
+  <table className="table">
+    
+    <thead className="table-dark">
+    <tr>
+      <th className="col-md-3">Materia Prima</th>
+      <th scope="col">Operador / Ayudante</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">No. De Envió</th>
+      <th scope="col">No. De Envió</th>
+      <th scope="col">No. De Envió</th>
+      <th scope="col">No. De Envió</th>
+      <th scope="col">No. De Envió</th>
+      <th scope="col">No. De Envió</th>
+    </tr>
+    </thead>
+
+    <tbody>
+      
+    </tbody>
+  </table>
          
 
 
