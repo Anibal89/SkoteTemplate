@@ -119,10 +119,10 @@ const SidebarContent = (props) => {
                 <li>
                   <Link to="/CorredorUni">{props.t("Corredor")}</Link>
                 </li>
-                {/* 
+                {/** 
                 <li>
-                  <Link to="/AdminUni">{props.t("Admin") } </Link>
-                </li>  */}
+                  <Link to="/Actividades-Bobinero">{props.t("Actividades") } </Link>
+                </li> */} 
               </ul>
             </li>
 

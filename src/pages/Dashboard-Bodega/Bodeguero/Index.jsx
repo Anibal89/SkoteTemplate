@@ -63,7 +63,7 @@ const Index = () => {
                 </label>
                 <td>
                 <label style={{display: 'flex', flexDirection: 'column',  color: 'blue'}} htmlFor="">Fecha
-              <input type="datetime-local" />    
+              <input type="date" />    
                 </label>
                 </td>
 
