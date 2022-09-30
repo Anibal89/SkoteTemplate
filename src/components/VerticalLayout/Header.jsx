@@ -132,7 +132,7 @@ const Header = props => {
                 tag="button"
               >
                 {" "}
-                {props.t("Mega Menu")} <i className="mdi mdi-chevron-down" />
+                {props.t("Menu")} <i className="mdi mdi-chevron-down" />
               </DropdownToggle>
               <DropdownMenu className="dropdown-megamenu">
                 <Row>
@@ -140,7 +140,7 @@ const Header = props => {
                     <Row>
                       <Col md={4}>
                         <h5 className="font-size-14 mt-0">
-                          {props.t("UI Components")}
+                          {props.t("Menu Desplegable")}
                         </h5>
                         <ul className="list-unstyled megamenu-list">
                           <li>
@@ -167,7 +167,7 @@ const Header = props => {
                         </ul>
                       </Col>
 
-                      <Col md={4}>
+                     {/*  <Col md={4}>
                         <h5 className="font-size-14 mt-0">
                           {props.t("Applications")}
                         </h5>
@@ -252,7 +252,7 @@ const Header = props => {
                             <Link to="#">{props.t("Charts")}</Link>
                           </li>
                         </ul>
-                      </Col>
+                      </Col> */}
 
                       <Col sm={5}>
                         <div>
