@@ -80,10 +80,11 @@ import Bodeguero from '../pages/Dashboard-Bodega/Bodeguero/Index'
 //Corredor
 
 import CorredorUni from '../pages/Corredor/Detalle/corredoruni'
+//import TablaCorredor from '../pages/Corredor/Detalle/TablaCorredor'
 
 //Administrador
 
-import Administrador from '../pages/Administrador/Admin/admin'
+//import Administrador from '../pages/Administrador/Admin/admin'
 
 // Israel
 
@@ -204,9 +205,10 @@ const authProtectedRoutes = [
 //Corredor
 
 { path: "/CorredorUni", component: CorredorUni },
+//{path: "/TablaCorredor", component: TablaCorredor}
 
 //Administrador
-{ path: "/AdminUni", component: Administrador },
+//{path: "/AdminUni", component: Administrador },
 
 
 // Israel

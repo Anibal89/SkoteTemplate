@@ -26,10 +26,9 @@ const products = [
   { id: 8, age: 85, qty: 1700, cost: 1300 },
   { id: 9, age: 37, qty: 1400, cost: 6400 },
   { id: 10, age: 14, qty: 1600, cost: 4000 },
-
 ];
 
-const EditableTables = () => {
+const TablaCorredor = () => {
   const columns = useMemo(
     () => [
       {
@@ -102,5 +101,4 @@ const EditableTables = () => {
   );
 };
 
-export default EditableTables;
-
+export default TablaCorredor;
