@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+//import Card from "reactstrap";
 
 import Select from "react-select";
+
+
 
 const options =[
     { value: "Du", label: "Duro" },
@@ -53,7 +56,7 @@ const maquinas =[
 
 
 import {
-    Container,
+    Container,Card,CardBody
   } from "reactstrap";
 
 const CorredorUni = () => {
@@ -63,6 +66,10 @@ const CorredorUni = () => {
       <Container fluid>
         <div>
             <h4>Datos Ingresados del corredor</h4>
+            <Card>
+                <CardBody>
+            <form action="">
+
         
         <table class="table table-responsive">
     <thead>
@@ -270,19 +277,19 @@ const CorredorUni = () => {
             <input type="text" />
             </td>
 
-            
-            <td>
-                <button className="GrabarRequi">Grabar</button>
-            </td>
-        </tr>
+            </tr>
         
-    </tbody>
-</table>
+     </tbody>
+       </table>
+       <button type="submit"  className="btn btn-primary" >Grabar</button>
+     </form>
+     </CardBody>
+     </Card>
         </div>
       </Container>
     </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
 export default CorredorUni;

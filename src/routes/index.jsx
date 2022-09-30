@@ -74,8 +74,9 @@ import DashboardSaas from "../pages/Dashboard-saas/index"
 import DashboardCrypto from "../pages/Dashboard-crypto/index"
 import Blog from "../pages/Dashboard-Blog/index"
 
-//Bodeguero
+//Bobinero
 import Bodeguero from '../pages/Dashboard-Bodega/Bodeguero/Index'
+import Actividades from "../pages/Dashboard-Bodega/Bodeguero/Actividades"
 
 //Corredor
 
@@ -199,8 +200,9 @@ const authProtectedRoutes = [
   { path: "/dashboard-crypto", component: DashboardCrypto },
   { path: "/blog", component: Blog },
 
-//Bodeguero
+//Bobinero
 { path: "/Bodega-Unisa", component: Bodeguero },
+ {path: "/Actividades-Bobinero", component: Actividades},
 
 //Corredor
 
