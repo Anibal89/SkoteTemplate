@@ -39,7 +39,7 @@ const areachart = () => {
   }
   const series = [
     {
-      name: "Series A",
+      name: "Series Z",
       data: [0, 150, 60, 180, 90, 75, 30],
     },
     {

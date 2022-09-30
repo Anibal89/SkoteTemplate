@@ -54,12 +54,12 @@ const Dashboard = props => {
   }));
 
   const reports = [
-    { title: "Orders", iconClass: "bx-copy-alt", description: "1,235" },
-    { title: "Revenue", iconClass: "bx-archive-in", description: "$35, 723" },
+    { title: "Maquinas extrusion", iconClass:"bx bx-bolt-circle", description: "48" },
+    { title: "Maquinas Corte", iconClass: "bx bx-cut", description: "12" },
     {
-      title: "Average Price",
-      iconClass: "bx-purchase-tag-alt",
-      description: "$16.2",
+      title: "Trabajadores",
+      iconClass: "bx bx-user-pin",
+      description: "200",
     },
   ];
 
@@ -137,7 +137,7 @@ const Dashboard = props => {
               <Card>
                 <CardBody>
                   <div className="d-sm-flex flex-wrap">
-                    <h4 className="card-title mb-4">Email Sent</h4>
+                    <h4 className="card-title mb-4">Fabricacion Bobinas</h4>
                     <div className="ms-auto">
                       <ul className="nav nav-pills">
                         <li className="nav-item">
@@ -152,7 +152,7 @@ const Dashboard = props => {
                             }}
                             id="one_month"
                           >
-                            Week
+                            Semana
                           </Link>{" "}
                         </li>
                         <li className="nav-item">
@@ -167,7 +167,7 @@ const Dashboard = props => {
                             }}
                             id="one_month"
                           >
-                            Month
+                            Mes
                           </Link>
                         </li>
                         <li className="nav-item">
@@ -182,7 +182,7 @@ const Dashboard = props => {
                             }}
                             id="one_month"
                           >
-                            Year
+                            año
                           </Link>
                         </li>
                       </ul>
@@ -195,18 +195,7 @@ const Dashboard = props => {
             </Col>
           </Row>
 
-          <Row>
-            <Col xl="4">
-              <SocialSource />
-            </Col>
-            <Col xl="4">
-              <ActivityComp />
-            </Col>
-
-            <Col xl="4">
-              <TopCities />
-            </Col>
-          </Row>
+        
 
           <Row>
             <Col lg="12">

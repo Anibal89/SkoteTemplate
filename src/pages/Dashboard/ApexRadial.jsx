@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import "./dashboard.scss";
 
 const ApexRadial = () => {
-  const series = [67];
+  const series = [75];
   const options = {
     plotOptions: {
       radialBar: {
@@ -26,7 +26,7 @@ const ApexRadial = () => {
         },
       },
     },
-    colors: ["#556ee6"],
+    colors: ["#0FBF25"],
     fill: {
       type: "gradient",
       gradient: {
@@ -41,7 +41,7 @@ const ApexRadial = () => {
     stroke: {
       dashArray: 4,
     },
-    labels: ["Series A"],
+    labels: ["Alto"],
   };
   return (
     <ReactApexChart

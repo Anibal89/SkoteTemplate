@@ -63,7 +63,7 @@ const LatestTranaction = props => {
         },
       },
       {
-        Header: "Billing Name",
+        Header: "Materia Prima",
         accessor: "billingName",
         disableFilters: true,
         filterable: true,
@@ -72,7 +72,7 @@ const LatestTranaction = props => {
         },
       },
       {
-        Header: "Date",
+        Header: "Sacos",
         accessor: "orderdate",
         disableFilters: true,
         filterable: true,
@@ -81,7 +81,7 @@ const LatestTranaction = props => {
         },
       },
       {
-        Header: "Total",
+        Header: "Total en Libras",
         accessor: "total",
         disableFilters: true,
         filterable: true,
@@ -89,7 +89,7 @@ const LatestTranaction = props => {
           return <Total {...cellProps} />;
         },
       },
-      {
+     /*  {
         Header: "Payment Status",
         accessor: "paymentStatus",
         disableFilters: true,
@@ -97,17 +97,17 @@ const LatestTranaction = props => {
         Cell: cellProps => {
           return <PaymentStatus {...cellProps} />;
         },
-      },
-      {
+      }, */
+     /*  {
         Header: "Payment Method",
         accessor: "paymentMethod",
         disableFilters: true,
         Cell: cellProps => {
           return <PaymentMethod {...cellProps} />;
         },
-      },
+      }, */
       {
-        Header: "View Details",
+        Header: "Metodos",
         disableFilters: true,
         accessor: "view",
         Cell: cellProps => {
@@ -116,9 +116,9 @@ const LatestTranaction = props => {
               type="button"
               color="primary"
               className="btn-sm btn-rounded"
-              onClick={toggleViewModal}
+           /*    onClick={toggleViewModal} */
             >
-              View Details
+              Ver Detalles
             </Button>
           );
         },
@@ -149,7 +149,7 @@ const LatestTranaction = props => {
       <EcommerceOrdersModal isOpen={modal1} toggle={toggleViewModal} />
       <Card>
         <CardBody>
-          <div className="mb-4 h4 card-title">Latest Transaction</div>
+          <div className="mb-4 h4 card-title">Materia prima</div>
           <TableContainer
             columns={columns}
             data={orders}

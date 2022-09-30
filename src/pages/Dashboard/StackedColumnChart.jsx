@@ -26,18 +26,18 @@ const StackedColumnChart = ({ periodData }) => {
     xaxis: {
       show: true,
       categories: [
-        "Jan",
+        "Ene",
         "Feb",
         "Mar",
-        "Apr",
+        "Abr",
         "May",
         "Jun",
         "Jul",
-        "Aug",
+        "Ago",
         "Sep",
         "Oct",
         "Nov",
-        "Dec"
+        "Dic"
       ],
       labels: {
         show: true

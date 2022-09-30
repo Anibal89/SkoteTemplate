@@ -11,24 +11,24 @@ const MonthlyEarning = () => {
       {" "}
       <Card>
         <CardBody>
-          <CardTitle className="mb-4">Monthly Earning</CardTitle>
+          <CardTitle className="mb-4">Niveles de Produccion</CardTitle>
           <Row>
             <Col sm="6">
-              <p className="text-muted">This month</p>
-              <h3>$34,252</h3>
+              <p className="text-muted">Septiembre</p>
+              <h3>20,050  Fardos</h3>
               <p className="text-muted">
                 <span className="text-success me-2">
                   {" "}
-                  12% <i className="mdi mdi-arrow-up"></i>{" "}
+                  35% <i className="mdi mdi-arrow-up"></i>{" "}
                 </span>{" "}
-                From previous period
+                Mes Anterior
               </p>
               <div className="mt-4">
                 <Link
                   to=""
                   className="btn btn-primary  btn-sm"
                 >
-                  View More <i className="mdi mdi-arrow-right ms-1"></i>
+                  Ver detalles <i className="mdi mdi-arrow-right ms-1"></i>
                 </Link>
               </div>
             </Col>
@@ -39,7 +39,7 @@ const MonthlyEarning = () => {
             </Col>
           </Row>
           <p className="text-muted mb-0">
-            We craft digital, graphic and dimensional thinking.
+            
           </p>
         </CardBody>
       </Card>
