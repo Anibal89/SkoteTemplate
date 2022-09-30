@@ -129,13 +129,14 @@ const israelruben = () => {
 
   {/* tabla en donde se guardan los datos de formulario */}
 
+  <div className="table-responsive">
   <table className="table">
     
     <thead className="table-dark">
     <tr>
       <th className="col-md-2 center">Materia Prima</th>
       <th className="font__size">Operador / Ayudante</th>
-      <th className="font__size">Nombre</th>
+      <th className="font__size center">Nombre</th>
       <th className="font__size">No. De Envió</th>
       <th className="font__size">Ingresos UNI</th>
       <th className="font__size">Ingreso por Traslado De Material</th>
@@ -152,6 +153,7 @@ const israelruben = () => {
     </tbody>
   </table>
          
+  </div>
 
 
 
