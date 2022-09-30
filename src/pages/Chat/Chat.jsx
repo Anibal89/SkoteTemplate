@@ -11,7 +11,7 @@ const Chat = () => {
       <div className="page-content">
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumbs title="Skote" breadcrumbItem="Modulo Usuario" />
+          <Breadcrumbs title="Inicio" breadcrumbItem="Modulo Usuario" />
       </Container>
     </div>
     </Fragment>

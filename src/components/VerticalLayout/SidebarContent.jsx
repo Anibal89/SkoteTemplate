@@ -1,90 +1,90 @@
-import PropTypes from "prop-types"
-import React, { useEffect, useRef } from "react"
+import PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 
 // //Import Scrollbar
-import SimpleBar from "simplebar-react"
+import SimpleBar from "simplebar-react";
 
 // MetisMenu
-import MetisMenu from "metismenujs"
-import { withRouter } from "react-router-dom"
-import { Link } from "react-router-dom"
+import MetisMenu from "metismenujs";
+import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //i18n
-import { withTranslation } from "react-i18next"
+import { withTranslation } from "react-i18next";
 
-const SidebarContent = props => {
-  const ref = useRef()
+const SidebarContent = (props) => {
+  const ref = useRef();
   // Use ComponentDidMount and ComponentDidUpdate method symultaniously
   useEffect(() => {
-    const pathName = props.location.pathname
+    const pathName = props.location.pathname;
 
     const initMenu = () => {
-      new MetisMenu("#side-menu")
-      let matchingMenuItem = null
-      const ul = document.getElementById("side-menu")
-      const items = ul.getElementsByTagName("a")
+      new MetisMenu("#side-menu");
+      let matchingMenuItem = null;
+      const ul = document.getElementById("side-menu");
+      const items = ul.getElementsByTagName("a");
       for (let i = 0; i < items.length; ++i) {
         if (pathName === items[i].pathname) {
-          matchingMenuItem = items[i]
-          break
+          matchingMenuItem = items[i];
+          break;
         }
       }
       if (matchingMenuItem) {
-        activateParentDropdown(matchingMenuItem)
+        activateParentDropdown(matchingMenuItem);
       }
-    }
-    initMenu()
-  }, [props.location.pathname])
+    };
+    initMenu();
+  }, [props.location.pathname]);
 
   useEffect(() => {
-    ref.current.recalculate()
-  })
+    ref.current.recalculate();
+  });
 
   function scrollElement(item) {
     if (item) {
-      const currentPosition = item.offsetTop
+      const currentPosition = item.offsetTop;
       if (currentPosition > window.innerHeight) {
-        ref.current.getScrollElement().scrollTop = currentPosition - 300
+        ref.current.getScrollElement().scrollTop = currentPosition - 300;
       }
     }
   }
 
   function activateParentDropdown(item) {
-    item.classList.add("active")
-    const parent = item.parentElement
-    const parent2El = parent.childNodes[1]
+    item.classList.add("active");
+    const parent = item.parentElement;
+    const parent2El = parent.childNodes[1];
     if (parent2El && parent2El.id !== "side-menu") {
-      parent2El.classList.add("mm-show")
+      parent2El.classList.add("mm-show");
     }
 
     if (parent) {
-      parent.classList.add("mm-active")
-      const parent2 = parent.parentElement
+      parent.classList.add("mm-active");
+      const parent2 = parent.parentElement;
 
       if (parent2) {
-        parent2.classList.add("mm-show") // ul tag
+        parent2.classList.add("mm-show"); // ul tag
 
-        const parent3 = parent2.parentElement // li tag
+        const parent3 = parent2.parentElement; // li tag
 
         if (parent3) {
-          parent3.classList.add("mm-active") // li
-          parent3.childNodes[0].classList.add("mm-active") //a
-          const parent4 = parent3.parentElement // ul
+          parent3.classList.add("mm-active"); // li
+          parent3.childNodes[0].classList.add("mm-active"); //a
+          const parent4 = parent3.parentElement; // ul
           if (parent4) {
-            parent4.classList.add("mm-show") // ul
-            const parent5 = parent4.parentElement
+            parent4.classList.add("mm-show"); // ul
+            const parent5 = parent4.parentElement;
             if (parent5) {
-              parent5.classList.add("mm-show") // li
-              parent5.childNodes[0].classList.add("mm-active") // a tag
+              parent5.classList.add("mm-show"); // li
+              parent5.childNodes[0].classList.add("mm-active"); // a tag
             }
           }
         }
       }
       scrollElement(item);
-      return false
+      return false;
     }
     scrollElement(item);
-    return false
+    return false;
   }
 
   return (
@@ -96,16 +96,14 @@ const SidebarContent = props => {
             <li>
               <Link to="/#" className="">
                 <i className="bx bx-home-circle"></i>
-                <span className="badge rounded-pill bg-info float-end">
-                  04
-                </span>
+                <span className="badge rounded-pill bg-info float-end">04</span>
                 <span>{props.t("Dashboards")}</span>
               </Link>
               <ul className="sub-menu" aria-expanded="false">
                 <li>
                   <Link to="/dashboard">{props.t("Dashboard")}</Link>
                 </li>
-           {/*      <li>
+                {/*      <li>
                   <Link to="/dashboard-saas">{props.t("Saas")}</Link>
                 </li>
                 <li>
@@ -114,7 +112,7 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/blog">{props.t("Blog")}</Link>
                 </li> */}
-                
+
                 <li>
                   <Link to="/Bodega-Unisa">{props.t("Bobinero")}</Link>
                 </li>
@@ -125,11 +123,6 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/AdminUni">{props.t("Admin") } </Link>
                 </li>  */}
-                <li>
-                  <Link to="/IsraelUni"> {props.t("Bodeguero")}</Link>
-                </li>
-              
-
               </ul>
             </li>
 
@@ -140,7 +133,7 @@ const SidebarContent = props => {
                 <i className="bx bx-user"></i>
                 <span>{props.t("Roles")}</span>
               </Link>
-          {/*     <li>
+              {/*     <li>
                   <Link to="/pages-swort">{props.t("Roles")}</Link>
                 </li> */}
             </li>
@@ -152,6 +145,14 @@ const SidebarContent = props => {
               </Link>
             </li>
 
+            <li className="menu-title">{props.t("Bodeguero")}</li>
+
+            <li>
+              <Link to="/IsraelUni"> 
+              <i className="bx bx-user-plus"></i>
+              <span>{props.t("Ingreso de Bodega")}</span>
+              </Link>
+            </li>
             {/* 
             <li>
               <Link to="/apps-filemanager" className="">
@@ -732,12 +733,12 @@ const SidebarContent = props => {
         </div>
       </SimpleBar>
     </React.Fragment>
-  )
-}
+  );
+};
 
 SidebarContent.propTypes = {
   location: PropTypes.object,
   t: PropTypes.any,
-}
+};
 
-export default withRouter(withTranslation()(SidebarContent))
+export default withRouter(withTranslation()(SidebarContent));
