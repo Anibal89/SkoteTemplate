@@ -133,15 +133,17 @@ const israelruben = () => {
     
     <thead className="table-dark">
     <tr>
-      <th className="col-md-3">Materia Prima</th>
-      <th scope="col">Operador / Ayudante</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">No. De Envió</th>
-      <th scope="col">No. De Envió</th>
-      <th scope="col">No. De Envió</th>
-      <th scope="col">No. De Envió</th>
-      <th scope="col">No. De Envió</th>
-      <th scope="col">No. De Envió</th>
+      <th className="col-md-2 center">Materia Prima</th>
+      <th className="font__size">Operador / Ayudante</th>
+      <th className="font__size">Nombre</th>
+      <th className="font__size">No. De Envió</th>
+      <th className="font__size">Ingresos UNI</th>
+      <th className="font__size">Ingreso por Traslado De Material</th>
+      <th className="font__size">Ingreso Bodega</th>
+      <th className="font__size">Ingreso Inventario 2</th>
+      <th className="font__size">Ingreso Paletizadora</th>
+      <th className="font__size">Ingreso Proveedores</th>
+      <th className="font__size">Ingresos Por Ajuste De Inventario</th>
     </tr>
     </thead>
 
