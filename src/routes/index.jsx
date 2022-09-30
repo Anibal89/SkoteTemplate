@@ -84,7 +84,7 @@ import CorredorUni from '../pages/Corredor/Detalle/corredoruni'
 
 //Administrador
 
-import Administrador from '../pages/Administrador/Admin/admin'
+//import Administrador from '../pages/Administrador/Admin/admin'
 
 // Israel
 
@@ -208,7 +208,7 @@ const authProtectedRoutes = [
 //{path: "/TablaCorredor", component: TablaCorredor}
 
 //Administrador
-{path: "/AdminUni", component: Administrador },
+//{path: "/AdminUni", component: Administrador },
 
 
 // Israel
