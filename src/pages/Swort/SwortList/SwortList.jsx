@@ -147,7 +147,7 @@ const SwortList = () => {
       <div className="page-content">
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs title="Tasks" breadcrumbItem="Modulo Prueba" />
+          <Breadcrumbs title="Inicio" breadcrumbItem="Modulo Rol" />
           <Row sm>
             <Col sm>
               <Card>

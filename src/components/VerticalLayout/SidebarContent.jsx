@@ -103,9 +103,9 @@ const SidebarContent = props => {
               </Link>
               <ul className="sub-menu" aria-expanded="false">
                 <li>
-                  <Link to="/dashboard">{props.t("Default")}</Link>
+                  <Link to="/dashboard">{props.t("Dashboard")}</Link>
                 </li>
-                <li>
+           {/*      <li>
                   <Link to="/dashboard-saas">{props.t("Saas")}</Link>
                 </li>
                 <li>
@@ -113,10 +113,8 @@ const SidebarContent = props => {
                 </li>
                 <li>
                   <Link to="/blog">{props.t("Blog")}</Link>
-                </li>
-                <li>
-                  <Link to="/pages-swort">{props.t("Roles")}</Link>
-                </li>
+                </li> */}
+                
                 <li>
                   <Link to="/Bodega-Unisa">{props.t("Bobinero")}</Link>
                 </li>
@@ -128,28 +126,33 @@ const SidebarContent = props => {
                   <Link to="/AdminUni">{props.t("Admin") } </Link>
                 </li>  */}
                 <li>
-                  <Link to="/IsraelUni"> {props.t("Israel")}</Link>
+                  <Link to="/IsraelUni"> {props.t("Bodeguero")}</Link>
                 </li>
               
 
               </ul>
             </li>
 
-            <li className="menu-title">{props.t("Apps")}</li>
-{/* 
+            <li className="menu-title">{props.t("Administracion")}</li>
+
             <li>
-              <Link to="/calendar" className=" ">
-                <i className="bx bx-calendar"></i>
-                <span>{props.t("Calendar")}</span>
+              <Link to="/pages-swort" className=" ">
+                <i className="bx bx-user"></i>
+                <span>{props.t("Roles")}</span>
               </Link>
+          {/*     <li>
+                  <Link to="/pages-swort">{props.t("Roles")}</Link>
+                </li> */}
             </li>
 
             <li>
               <Link to="/chat" className="">
-                <i className="bx bx-chat"></i>
-                <span>{props.t("Chat")}</span>
+                <i className="bx bx-user-plus"></i>
+                <span>{props.t("Crear Usuario")}</span>
               </Link>
             </li>
+
+            {/* 
             <li>
               <Link to="/apps-filemanager" className="">
                 <i className="bx bx-file"></i>
