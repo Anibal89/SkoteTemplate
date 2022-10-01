@@ -10,7 +10,7 @@ import { authProtectedRoutes,publicRoutes } from "./routes"
 // Import all middleware
 import Authmiddleware from "./routes/route"
 
-// layouts Format
+// layouts Format --
 import VerticalLayout from "./components/VerticalLayout/"
 import HorizontalLayout from "./components/HorizontalLayout/"
 import NonAuthLayout from "./components/NonAuthLayout"
